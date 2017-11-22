@@ -49,5 +49,17 @@ y escoger el codigo que corresponda al cambio. Se debe borrar <<<<<< y =====
 Una vez hecho esto se debe hacer `git add -A` y `git commit -m "comentario"`
 
 ---
+```
+To https://github.com/Azul75/Breeze
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Azul75/Breeze'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
 
-
+Este error indica que hay cambios en el servidor que no tienes en local,
+para solucionarlo ejecuta  `git add -A`, `git commit -m "comentario"` y `git pull origin master` 
+y despues que se terminen de bajar los cambios hacer  `git push origin master`
