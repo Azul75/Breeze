@@ -1,7 +1,15 @@
 # Breeze
 Proyecto akus
 
-Comandos Git
+## Como clonar este repositorio
+
+* Copia la siguiente url `https://github.com/Azul75/Breeze`
+* Una vez la hayas copiado, ve a la carpeta del servidor que usaras, por ejemplo si usaras xampp ve a `C:\xampp\htdocs` una vez en la carpeta htdocs o public del servidor que usas da clic derecho y selecciona la opcion **Git Bash Here**. Se debera abrir una consola.
+* Una vez la consola se habra escriba el siguiente comando: `git clone <url que copiaste aqui sin el mayor y menor que>` ejemplo: `git clone https://github.com/Azul75/Breeze` y espera a que termine de descargar el repositorio.
+* Una vez que termine escribe `cd Breeze` para entrar a la carpeta descargada
+* Listo! Ya tienes el repositorio en local, ahora has los cambios que requieras y cuando termines subelos al servidor usando los comandos de abajo. SIEMPRE QUE TERMINES DE MODIFICAR SUBE LOS CAMBIOS.
+
+## Comandos Git
 
 Comando para añadir todos los archivos modificados a la cola de git
 
@@ -28,7 +36,7 @@ Comando para ver si hay cambios en el repositorio local
 `git status`
 
 ----------------------------------------------------
-Errores comunes:
+## Errores comunes:
 
 ```
 CONFLICT (content): Merge conflict in <fileName>
