@@ -30,8 +30,10 @@ Comando para ver si hay cambios en el repositorio local
 ----------------------------------------------------
 Errores comunes:
 
+```
 CONFLICT (content): Merge conflict in <fileName>
 Automatic merge failed; fix conflicts and then commit the result.
+```
 
 Este error se debe a que dos commits se han juntado y el sistema no sabe cual elegir. 
 Se debe ir al archivo que marca en <filename> y corregirlo manualmente. Sedebe buscar
