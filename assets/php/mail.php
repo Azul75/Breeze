@@ -8,7 +8,7 @@
 		exit();
 	}
 
-	//$db=new mysqli('localhost',"root","","Cookies") or die("You failed");
+	$db=new mysqli('localhost',"root","","Cookies") or die("You failed");
 	$entry="INSERT INTO Login(name,email,phone,comment) VALUES ('$name','$email','$phone','$comment')";
 	if ($db->query($entry)===TRUE){
 	    echo "Gracias por su preferencia";
