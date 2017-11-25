@@ -11,6 +11,7 @@
 
 	require __DIR__.'/PHPMailer/PHPMailerAutoload.php';
 
+	ob_start();
 	$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 	try {
 	    //Server settings
@@ -25,7 +26,7 @@
 
 	    //Recipients
 	    $mail->setFrom('mexitaco44@gmail.com', 'Breeze');
-	    $mail->addAddress('jonedharo@hotmail.com', 'Jose Luis');
+	    $mail->addAddress('mexitaco44@gmail.com', 'Breeze');
 
 	    //Content
 	    $mail->isHTML(true);                                  // Set email format to HTML
@@ -35,15 +36,15 @@
 
 	    $mail->send();
 	} catch (Exception $e) {
-
 	}
+	ob_end_clean();
 
 	$db=new mysqli('localhost',"root","","Mail") or die("");
 	$entry="INSERT INTO Message(name,email,phone,comment) VALUES ('$name','$email','$phone','$comment')";
 	if ($db->query($entry)===TRUE){
-	    echo "1";
+	    echo "Gracias por su preferencia";
 	}else{
-		echo "0";
+		echo "Mensaje fallido";
 	}
 
 	$db->close();
