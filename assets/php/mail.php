@@ -1,23 +1,18 @@
 <?php
-	$name=$_POST[""];
-	$email=$_POST[""];
-	$phone=$_POST[""];
-	$comment=$_POST[""];
+	$name=$_REQUEST["n"];
+	$email=$_REQUEST["e"];
+	$phone=$_REQUEST["p"];
+	$comment=$_REQUEST["m"];
+	$lan=$_REQUEST["lan"];
 
-	if($name==""||$email==""||$comment==""||strlen($name)<=30||strlen($name)<=30||strlen($name)<=10||strlen($name)<=100){
+	if($email==""||$comment==""||strlen($name)>40||strlen($email)>40||strlen($phone)>10||strlen($comment)>100){
+		echo "string";
 		exit();
-	}
-
-	//$db=new mysqli('localhost',"root","","Cookies") or die("You failed");
-	$entry="INSERT INTO Login(name,email,phone,comment) VALUES ('$name','$email','$phone','$comment')";
-	if ($db->query($entry)===TRUE){
-	    echo "Gracias por su preferencia";
-	}else{
-	    echo "Error: ".$entry."<br>".$db->error;
 	}
 
 	require __DIR__.'/PHPMailer/PHPMailerAutoload.php';
 
+	ob_start();
 	$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 	try {
 	    //Server settings
@@ -31,8 +26,8 @@
 	    $mail->Port = 587;                                    // TCP port to connect to
 
 	    //Recipients
-	    $mail->setFrom('jonedharo@gmail.com', 'Haro');
-	    $mail->addAddress('jlgpblue@gmail.com', 'Jose Luis');
+	    $mail->setFrom('mexitaco44@gmail.com', 'Breeze');
+	    $mail->addAddress('mexitaco44@gmail.com', 'Breeze');
 
 	    //Content
 	    $mail->isHTML(true);                                  // Set email format to HTML
@@ -41,9 +36,25 @@
 	    $mail->AltBody ='This is the body in plain text for non-HTML mail clients';
 
 	    $mail->send();
-	    echo 'Message has been sent';
 	} catch (Exception $e) {
-	    echo 'Message could not be sent.';
-	    echo 'Mailer Error: ' . $mail->ErrorInfo;
 	}
+	ob_end_clean();
+
+	$db=new mysqli('localhost',"root","","Mail") or die("");
+	$entry="INSERT INTO Message(name,email,phone,comment) VALUES ('$name','$email','$phone','$comment')";
+	if ($db->query($entry)===TRUE){
+		if($lan=="es"){
+	    	echo "Gracias por su preferencia";
+		}else{
+			echo "Error: Mensaje no enviado";
+		}
+	}else{
+		if($lan=="es"){
+	    	echo "Thanks for your preference";
+		}else{
+			echo "Error: Message not sent";
+		}		
+	}
+
+	$db->close();
 ?>

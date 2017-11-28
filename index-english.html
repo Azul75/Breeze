@@ -160,5 +160,23 @@
 				}
 			});
 		</script>
+		<script>
+			function enter(){
+				var name=document.getElementById('name').value;
+				var email=document.getElementById('email').value;
+				var phone=document.getElementById('tel').value;
+				var message=document.getElementById('message').value;
+
+				var x=new XMLHttpRequest();
+		        x.onreadystatechange=function() {
+		            if (this.readyState==4 && this.status==200){
+		                document.getElementById("txt").innerHTML=this.responseText;
+		            }
+		        };
+		        x.open("GET","assets/php/mail.php?n="+name+"&e="+email+"&p="+phone+"&m="+message+"&lan="+en,true);
+		        x.send();
+				return false;
+			}
+		</script>
 </body>
 </html>
