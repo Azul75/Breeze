@@ -56,7 +56,7 @@
 		<p class="lead text-center w-50 mx-auto"> Listing price of equipment and service budget is free of charge. Installation, maintenance and services based personal needs of the installation including: Electrical wiring and plumbing, drywall detailing, workload and paint. </p>
 
 		<h1 class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Solutions</h1>
-		<p class="lead text-center w-50 mx-auto">In the purchase of an AC unit we provide with the installation and Majin-Boo for free!</p>
+		<p class="lead text-center w-50 mx-auto">Cookies</p>
 
 		<h1 id="about" class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">About us</h1>
 		<p class="lead text-center w-50 mx-auto">We are a company that provides services in Puerto Vallarta that include installation and basic services for air conditioners.  A great deal of experience in the business has let us provide with quality for all of our clientele over the years. If you wish to purchase any of our services or have any questions please do not hesitate to send us a message with the contact information that is provided at the top of the website.</p>
@@ -72,7 +72,7 @@
 			</div>
 			<div class="card mr-4"><img class="img-fluid card-img-top w-100 d-block opacity-effect" src="./assets/img/mtto4.jpg" style="height:246px;">
 				<div class="card-body">
-					<h4 class="card-title">Mantenimiento </h4>
+					<h4 class="card-title"> Miscellaneous </h4>
 					<p class="card-text">Nuestro servicio de mantenimiento 
 					otorga una solución para proteger tus equipos con la finalidad de prolongar su vida útil, para darle un óptimo funcionamiento y prevenir fallas o mal funcionamiento a futuro.</p>
 				</div>
@@ -89,22 +89,25 @@
 <div class="container">
 		<h1 id="contact" class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Contact us</h1></div>
 		<div class="contact-clean">
-			<form method="post">
+			<form onsubmit="return enter()">
 				<h2 class="text-center">Contact Form</h2>
 				<div class="form-group"> 
-					<input class="form-control" type="text" name="name" placeholder="&#x1f464; Name">
+					<input class="form-control" id="name" type="text" name="name" maxlength="40" placeholder="&#x1f464; Name">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="email" name="email" required="" placeholder="&#x1f584; Email" inputmode="email">
+					<input class="form-control" id="email" type="email" name="email" required="" maxlength="40" placeholder="&#x1f584; Email" inputmode="email">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#x1f57f; Telephone" inputmode="tel">
+					<input class="form-control" id="tel" type="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#x1f57f; Phone" inputmode="tel">
 				</div>
 				<div class="form-group">
-					<textarea class="form-control" rows="20" name="message" placeholder="Message"></textarea>
+					<textarea class="form-control" id="message" rows="20" name="message" required="" maxlength="100" placeholder="Comment"></textarea>
 				</div>
 				<div class="form-group">
-					<button class="btn btn-primary" type="submit"> Send </button>
+					<button class="btn btn-primary" type="submit">Send</button>
+				</div>
+				<div>
+					<p class="card-text" id="txt"></p>
 				</div>
 			</form>
 		</div>
