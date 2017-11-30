@@ -5,7 +5,6 @@
 	$comment=$_REQUEST["m"];
 
 	if($email==""||$comment==""||strlen($name)>40||strlen($email)>40||strlen($phone)>10||strlen($comment)>100){
-		echo "string";
 		exit();
 	}
 

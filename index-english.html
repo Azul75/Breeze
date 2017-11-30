@@ -88,22 +88,25 @@
 <div class="container">
 		<h1 id="contact" class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Contact us</h1></div>
 		<div class="contact-clean">
-			<form method="post">
+			<form method="post" onsubmit="return enter()">
 				<h2 class="text-center">Contact Form</h2>
 				<div class="form-group"> 
-					<input class="form-control" type="text" name="name" placeholder="&#x1f464; Name">
+					<input class="form-control" type="text" id="name" name="name" placeholder="&#x1f464; Name">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="email" name="email" required="" placeholder="&#x1f584; Email" inputmode="email">
+					<input class="form-control" type="email" id="email" name="email" required="" placeholder="&#x1f584; Email" inputmode="email">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#x1f57f; Telephone" inputmode="tel">
+					<input class="form-control" type="tel" id="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#x1f57f; Telephone" inputmode="tel">
 				</div>
 				<div class="form-group">
-					<textarea class="form-control" rows="20" name="message" placeholder="Message"></textarea>
+					<textarea class="form-control" rows="20" id="message" name="message" placeholder="Message"></textarea>
 				</div>
 				<div class="form-group">
 					<button class="btn btn-primary" type="submit"> Send </button>
+				</div>
+				<div>
+					<p class="card-text" id="txt"></p>
 				</div>
 			</form>
 		</div>

@@ -175,7 +175,7 @@
 				var x=new XMLHttpRequest();
 		        x.onreadystatechange=function() {
 		            if (this.readyState==4 && this.status==200){
-		                document.getElementById("txt").innerHTML=this."Gracias por su preferencia";
+		                document.getElementById("txt").innerHTML="Gracias por su preferencia";
 		            }
 		        };
 		        x.open("GET","assets/php/mail.php?n="+name+"&e="+email+"&p="+phone+"&m="+message,true);
