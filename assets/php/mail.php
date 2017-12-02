@@ -3,8 +3,10 @@
 	$email=$_REQUEST["e"];
 	$phone=$_REQUEST["p"];
 	$comment=$_REQUEST["m"];
+	$lan=$_REQUEST["lan"];
 
 	if($email==""||$comment==""||strlen($name)>40||strlen($email)>40||strlen($phone)>10||strlen($comment)>100){
+		echo "string";
 		exit();
 	}
 
@@ -36,4 +38,23 @@
 	    $mail->send();
 	} catch (Exception $e) {
 	}
+	ob_end_clean();
+
+	$db=new mysqli('localhost',"root","","Mail") or die("");
+	$entry="INSERT INTO Message(name,email,phone,comment) VALUES ('$name','$email','$phone','$comment')";
+	if ($db->query($entry)===TRUE){
+		if($lan=="es"){
+	    	echo "Gracias por su preferencia";
+		}else{
+			echo "Error: Mensaje no enviado";
+		}
+	}else{
+		if($lan=="es"){
+	    	echo "Thanks for your preference";
+		}else{
+			echo "Error: Message not sent";
+		}		
+	}
+
+	$db->close();
 ?>

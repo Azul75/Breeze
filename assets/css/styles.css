@@ -21,8 +21,6 @@ body {
     position: relative;
 }
 
-.invert { filter: invert(100%); }
-
 .opacity-effect {
     opacity: .8;
     transition: all .2s;
@@ -30,4 +28,22 @@ body {
 
 .opacity-effect:hover {
     opacity: 1;
+}
+#logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 700px){
+    body{
+        font-size:12px;
+    }
+    #logotipo {
+        width: 100px;
+    }
+    h1 {
+        font-size:2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
