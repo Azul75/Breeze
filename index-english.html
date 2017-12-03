@@ -122,22 +122,25 @@
 			</li>
 		</div>
 		<div class="contact-clean">
-			<form method="post">
+			<form method="post" onsubmit="return enter()">
 				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze" title="Breeze"></div>
 				<div class="form-group"> 
-					<input class="form-control" type="text" name="name" placeholder="&#xf007; Name">
+					<input class="form-control" type="text" id="name" name="name" placeholder="&#xf007; Name">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="email" name="email" required="" placeholder="&#xf0e0; Email" inputmode="email">
+					<input class="form-control" type="email" id="email" name="email" required="" placeholder="&#xf0e0; Email" inputmode="email">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#xf095; Telephone" inputmode="tel">
+					<input class="form-control" type="tel" id="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#xf095; Telephone" inputmode="tel">
 				</div>
 				<div class="form-group">
-					<textarea class="form-control" rows="20" name="message" placeholder="&#xf27a; Message"></textarea>
+					<textarea class="form-control" rows="20" id="message" name="message" placeholder="&#xf27a; Message"></textarea>
 				</div>
 				<div class="form-group">
 					<button class="btn btn-primary" type="submit"> Send </button>
+				</div>
+				<div>
+					<p class="card-text" id="txt"></p>
 				</div>
 			</form>
 		</div>
@@ -203,10 +206,18 @@
 				var x=new XMLHttpRequest();
 		        x.onreadystatechange=function() {
 		            if (this.readyState==4 && this.status==200){
-		                document.getElementById("txt").innerHTML=this.responseText;
+		                document.getElementById("txt").innerHTML="Thanks for your preference";
+		                document.getElementById("name").value="";
+		                document.getElementById("email").value="";
+		                document.getElementById("tel").value="";
+		                document.getElementById("message").value="";
+		                document.getElementById("name").placeholder="Name";
+		                document.getElementById("email").placeholder="Email";
+		                document.getElementById("tel").placeholder="Telephone";
+		                document.getElementById("message").placeholder="Message";
 		            }
 		        };
-		        x.open("GET","assets/php/mail.php?n="+name+"&e="+email+"&p="+phone+"&m="+message+"&lan="+en,true);
+		        x.open("GET","assets/php/mail.php?n="+name+"&e="+email+"&p="+phone+"&m="+message,true);
 		        x.send();
 				return false;
 			}

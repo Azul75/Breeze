@@ -125,7 +125,7 @@
 			</li>
 		</div>
 		<div class="contact-clean">
-			<form method="post">
+			<form method="post" onsubmit="return enter()"">
 				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze" title="Breeze"></div>
 				<div class="form-group"> 
 					<input class="form-control" id="name" type="text" name="name" maxlength="40" placeholder="&#xf007; Nombre">
@@ -190,7 +190,7 @@
 					}
 				}
 			});
-			$(window).scroll(function() {
+			$(window).scroll(fusnction() {
 				var targetScroll = $('#content').position().top;
 				if($(window).scrollTop() > targetScroll) {
 					$(".totop").addClass("active");
@@ -209,10 +209,18 @@
 				var x=new XMLHttpRequest();
 		        x.onreadystatechange=function() {
 		            if (this.readyState==4 && this.status==200){
-		                document.getElementById("txt").innerHTML=this.responseText;
+		                document.getElementById("txt").innerHTML="Gracias por su preferencia";
+		                document.getElementById("name").value="";
+		                document.getElementById("email").value="";
+		                document.getElementById("tel").value="";
+		                document.getElementById("message").value="";
+		                document.getElementById("name").placeholder="Nombre";
+		                document.getElementById("email").placeholder="Email";
+		                document.getElementById("tel").placeholder="Telefono";
+		                document.getElementById("message").placeholder="Mensaje";
 		            }
 		        };
-		        x.open("GET","assets/php/mail.php?n="+name+"&e="+email+"&p="+phone+"&m="+message+"&lan="+es,true);
+		        x.open("GET","assets/php/mail.php?n="+name+"&e="+email+"&p="+phone+"&m="+message,true);
 		        x.send();
 				return false;
 			}
