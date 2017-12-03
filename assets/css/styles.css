@@ -74,4 +74,8 @@ body {
     p {
         font-size: 1rem;
     }
+    .btn-secondary {
+        font-size: 0.7rem;
+        box-sizing: border-box;
+    }
 }

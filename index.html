@@ -154,7 +154,7 @@
 		</div>
 		<section></section> <!--Seccion pendiente y Scrips abajo-->
 
-		<a href="#top" class="totop"><span class="ion-ios-arrow-up"></span></a>
+		<a href="#top" class="totop" title="hacia arriba"><span class="ion-ios-arrow-up"></span></a>
 		<script src="./assets/js/jquery.min.js"></script>
 		<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
@@ -187,7 +187,7 @@
 					}
 				}
 			});
-			$(window).scroll(fusnction() {
+			$(window).scroll(function() {
 				var targetScroll = $('#content').position().top;
 				if($(window).scrollTop() > targetScroll) {
 					$(".totop").addClass("active");
