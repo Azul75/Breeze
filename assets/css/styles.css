@@ -36,24 +36,30 @@ body {
 .phone {
     color: white;
     margin-left: 40px;
+    padding: 0px;
 }
 .phone-number {
     list-style-type: none;
     margin: 0;
     padding: 0;
     color: black;
-    font-size: 22px;
     text-align: center;
 }
-.phone ul, .phone li {
+.phone ul, .phone li, .phone-number ul, .phone-number li {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    color: white;
-    font-size: 22px;
-    text-align: center;
+    font-size: 18px;
+    text-decoration: inherit;
 }
 
+.form-control {
+  padding:10px;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
 
 @media screen and (max-width: 700px){
     body{
