@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.breezepv.mx [NC]
+RewriteRule ^(.*)$ http://breezepv.mx/$1 [L,R=301]
+
+RewriteEngine on
+RewriteRule ^Inicio/$ /index.html [L]
+RewriteRule ^Home/$ /index-english.html [L]
+
