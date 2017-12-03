@@ -40,10 +40,7 @@
 				<img id="logotipo" src="./assets/img/logo-blanco.png" width="140" alt="Logo">
 			</div>
 			<div class="phone">
-				<li>
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					<a href="tel:3221376315" title="Call Us">322 137 6315</a>
-				</li>
+				<li><a class="btn btn-secondary" href="tel:3221376315" title="Call Us"><i class="fa fa-phone" aria-hidden="true"></i> 322 137 6315</a></li>
 			</div>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navcol-1">
@@ -51,7 +48,7 @@
 					<li><a class="nav-link" href="#about" style="margin:0px;color:rgb(255,255,255);">About Us</a></li>
 					<li><a class="nav-link" href="#services" style="color:rgb(255,255,255);">Services</a></li>
 					<li><a class="nav-link" href="#contact" style="color:rgb(255,255,255);">Contact us</a></li>
-					<li><a class="btn btn-secondary" href="index.html">Español</a></li>
+					<li><a class="btn btn-secondary" href="index.html" title="cambiar a idioma español">Español</a></li>
 				</ul>
 			</div>
 		</div>
@@ -123,7 +120,7 @@
 		</div>
 		<div class="contact-clean">
 			<form method="post" onsubmit="return enter()">
-				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze" title="Breeze"></div>
+				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze Puerto Vallarta" title="Breeze Puerto Vallarta"></div>
 				<div class="form-group"> 
 					<input class="form-control" type="text" id="name" name="name" placeholder="&#xf007; Name">
 				</div>
@@ -146,7 +143,7 @@
 		</div>
 		<div class="footer-basic">
 			<footer>
-				<div class="social"><a href="https://www.facebook.com/" target="_blank" title="Enlace a Fanpage de Facebook"><i class="icon ion-social-facebook"></i></a></div> <!--Enlazar a pagina de FB de Breeze-->
+				<div class="social"><a href="https://www.facebook.com/Breezepvmx-378051409316019/" target="_blank" title="link to Facebook Fanpage"><i class="icon ion-social-facebook"></i></a></div> <!--Enlazar a pagina de FB de Breeze-->
 				<ul class="list-inline"></ul>
 				<p class="text-center">All rights reserved Breeze &copy; 2017</p>
 				<p class="text-center"><small>Powered by Washines Co. Ltd</small></p>
@@ -196,6 +193,7 @@
 				}
 			});
 		</script>
+		
 		<script>
 			function enter(){
 				var name=document.getElementById('name').value;

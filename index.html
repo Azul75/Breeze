@@ -41,10 +41,7 @@
 				<img id="logotipo" src="./assets/img/logo-blanco.png" width="140" alt="Logo">
 			</div>
 			<div class="phone">
-				<li>
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					<a href="tel:3221376315" title="Llámanos">322 137 6315</a>
-				</li>
+				<li><a class="btn btn-secondary" href="tel:3221376315" title="Llámanos"><i class="fa fa-phone" aria-hidden="true"></i> 322 137 6315</a></li>
 			</div>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navcol-1">
@@ -52,7 +49,7 @@
 					<li class="nav-item" role="presentation"><a class="nav-link" href="#about" style="margin:0px;color:rgb(255,255,255);">Nosotros</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link" href="#services" style="color:rgb(255,255,255);">Servicios </a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link" href="#contact" style="color:rgb(255,255,255);">Contacto</a></li>
-					<li><a class="btn btn-secondary" href="index-english.html">English</a></li>
+					<li><a class="btn btn-secondary" href="index-english.html" title="change to English">English</a></li>
 					
 				</ul>
 			</div>
@@ -126,7 +123,7 @@
 		</div>
 		<div class="contact-clean">
 			<form method="post" onsubmit="return enter()"">
-				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze" title="Breeze"></div>
+				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze Puerto Vallarta" title="Breeze Puerto Vallarta"></div>
 				<div class="form-group"> 
 					<input class="form-control" id="name" type="text" name="name" maxlength="40" placeholder="&#xf007; Nombre">
 				</div>
@@ -199,6 +196,7 @@
 				}
 			});
 		</script>
+		
 		<script>
 			function enter(){
 				var name=document.getElementById('name').value;
