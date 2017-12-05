@@ -5,4 +5,3 @@ RewriteRule ^(.*)$ http://breezepv.mx/$1 [L,R=301]
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
