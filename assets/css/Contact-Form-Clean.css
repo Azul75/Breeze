@@ -52,6 +52,10 @@
   border:1px solid #b2b2b2;
 }
 
+.form-control {
+  font-family: "FontAwesome";
+}
+
 .contact-clean form textarea.form-control {
   min-height:100px;
   max-height:260px;

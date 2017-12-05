@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="en-US">
 <head>
 	<meta charset="utf-8">
 	<meta name="language" content="english"/>
@@ -48,7 +48,7 @@
 				<img id="logotipo" src="./assets/img/logo-blanco.png" width="140" alt="Logo">
 			</div>
 			<div class="phone">
-				<li><a class="btn btn-secondary" href="tel:3221376315" title="Call Us"><i class="fa fa-phone" aria-hidden="true"></i> 322 137 6315</a></li>
+				<span><a class="btn btn-secondary" href="tel:3221376315" title="Call Us"><i class="fa fa-phone" aria-hidden="true"></i> 322 137 6315</a></span>
 			</div>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navcol-1">
@@ -107,12 +107,11 @@
 		<h2 class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Solutions</h2>
 		<p class="lead text-center w-50 mx-auto">We offer integral solutions to the requirements of our clients, starting from the basic need of acquiring an air conditioning equipment until its installation and maintenance.</p>
 
-		<h2 id="about" class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">About us</h2>
+		<h2 class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">About us</h2>
 		<p class="lead text-center w-50 mx-auto">We are a company that provides services in Puerto Vallarta that include installation and basic services for air conditioners.  A great deal of experience in the business has let us provide with quality for all of our clientele over the years. If you wish to purchase any of our services or have any questions please do not hesitate to send us a message with the contact information that is provided at the top of the website.</p>
 
-		<h3 id="about" class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Service Guarantee</h3>
+		<h3 class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Service Guarantee</h3>
 		<p class="lead text-center w-50 mx-auto">All our services and jobs have a satisfaction guarantee</p>
-		</p>
 	</div>
 <div class="container-fluid">
 		<!--Tarjetas de Servicio-->
@@ -141,25 +140,25 @@
 <div class="container">
 		<h2 id="contact" class="text-center" style="padding:20px;margin:39px;color:#75b2dd;">Contact Us</h2></div>
 		<div class="phone-number">
-			<li>
+			<span>
 				<i class="fa fa-phone" aria-hidden="true"></i>
 				<a href="tel:3221376315" title="Call Us">322 137 6315</a>
-			</li>
+			</span>
 		</div>
 		<div class="contact-clean">
 			<form method="post" onsubmit="return enter()">
 				<div id="logo"><img src="./assets/img/logo-negro.png" width="120" alt="Breeze Puerto Vallarta" title="Breeze Puerto Vallarta"></div>
 				<div class="form-group"> 
-					<input class="form-control" type="text" id="name" name="name" placeholder="&#xf007; Name">
+					<input class="form-control" type="text" id="name" name="name" placeholder="&#xf007; Name" required>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="email" id="email" name="email" required="" placeholder="&#xf0e0; Email" inputmode="email">
+					<input class="form-control" type="email" id="email" name="email" placeholder="&#xf0e0; Email" required>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="tel" id="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#xf095; Telephone" inputmode="tel">
+					<input class="form-control" type="tel" id="tel" name="tel" maxlength="10" pattern="[0-9]+" placeholder="&#xf095; Telephone" required>
 				</div>
 				<div class="form-group">
-					<textarea class="form-control" rows="20" id="message" name="message" placeholder="&#xf27a; Message"></textarea>
+					<textarea class="form-control" rows="20" id="message" name="message" placeholder="&#xf27a; Message" required></textarea>
 				</div>
 				<div class="form-group">
 					<button class="btn btn-primary" type="submit"> Send </button>
@@ -178,7 +177,7 @@
 				<p class="text-center"><small>Powered by Washines Co. Ltd</small></p>
 			</footer>
 		</div>
-		<section></section> <!--Seccion pendiente y Scrips abajo-->
+		<!--Seccion pendiente y Scrips abajo-->
 
 		<a href="#top" class="totop" title="to top"><span class="ion-ios-arrow-up"></span></a>
 		<script src="./assets/js/jquery.min.js"></script>
@@ -249,5 +248,5 @@
 				return false;
 			}
 		</script>
-</body>
+	</body>
 </html>
