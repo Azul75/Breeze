@@ -1,5 +1,5 @@
 # Breeze
-Proyecto akus **Demo** https://azul75.github.io/Breeze/
+Proyecto Breeze **Demo** https://azul75.github.io/Breeze/
 
 ## Como clonar este repositorio
 
